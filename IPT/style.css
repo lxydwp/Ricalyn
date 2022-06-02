@@ -1,0 +1,875 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --custom-bg-clr: #9EC680;
+    --custom-blue-clr: #366FDF;
+    --custom-navbar-bg-clr: #9EC680;
+    --custom-hover: #344e41;
+    --other-custom-hover: #31572c;
+    --custom-dark-green-clr: #4F7636;
+    --custom-light-gray: #E5E5E5;
+    --custom-dark-gray: #adb5bd;
+    --custom-purple-clr: #C071CD;
+    --custom-black-clr: #0b090a;
+    --custom-ff: 'Roboto', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: var(--custom-ff);
+}
+
+/*customizing header and navbar*/
+.header {
+    background: rgba(0,0,0,0.60);
+}
+
+.left-nav {
+    width: 30%;
+    display: flex;
+}
+
+.searchbar-none {
+    display: none;
+}
+
+.searchbar-in-navbartoggler form {
+    position: relative;
+}
+
+.searchbar-mobile-view {
+    width: 100%;
+    padding: .5rem;
+    border: 2px solid var(--custom-dark-gray);
+    border-radius: 20px;
+    margin-top: 1.5rem;
+    outline: none;
+}
+
+.magnifying-glass-btn-mobile-view {
+    position: absolute;
+    top: 27px;
+    right: 10px;
+}
+
+.navbar-brand, .nav-link {
+    font-family: var(--custom-ff);
+}
+
+.navbar-toggler {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-light .navbar-toggler {
+    border: 1px solid white;
+}
+
+.navbar-toggler:active, .navbar-toggler:focus, .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: 200ms;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    right: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: 200ms;
+}
+
+.nav-link:hover::before, .nav-link:hover::after {
+    width: 40%;
+}
+
+.black-transparency {
+    background-color: black;
+    height: 100%;
+}
+
+/*customizing landing page*/
+.landing-page {
+    background-image: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)), url(img/image-1.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1000;
+    width: 100%;
+    height: 100%;
+    padding: 5rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texts, .btn-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-section {
+    gap: 1rem;
+}
+
+.img-responsive {
+    width: 100%;
+    min-height: 200px;
+    max-width: 890px;
+    margin-bottom: 1rem;
+}
+
+/*customizing buttons*/
+.custom-sign-up-btn-dark-green, .custom-btn-1 {
+    background-color: var(--custom-dark-green-clr);
+}
+
+.custom-sign-up-btn-dark-green:hover, .custom-btn-1:hover {
+    background-color: var(--other-custom-hover);
+}
+
+.custom-btn-1 {
+    width: 103px;
+}
+
+.custom-btn-2 {
+    width: 103px;
+    background-color: var(--custom-light-gray);
+}
+
+/*customizing homepage*/
+.homepage {
+    margin-top: 8rem;
+}
+
+.homepage-grid {
+    margin-top: 2rem;
+}
+
+.left-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.homepage-header, .rating {
+    text-align: center;
+}
+
+.homepage-img {
+    width: 98%;
+    margin-bottom: 1.125rem;
+}
+
+.homepage-subheader {
+    margin-top: 2rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+.right-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-col-btn-section {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.right-col-custom-btn {
+    background-color: var(--custom-dark-gray);
+}
+
+.map {
+    border: 10px solid var(--custom-bg-clr);
+    margin-bottom: 1.5rem;
+}
+
+.review-header {
+    margin-bottom: 1.3rem;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+.user-review {
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid black;
+}
+
+.fa-m {
+    width: 30px;
+    text-align: center;
+    padding: .5rem;
+    border-radius: 50%;
+    background-color: #185E86;
+    color: white;
+}
+
+.fa-v {
+    width: 30px;
+    text-align: center;
+    padding: .5rem;
+    border-radius: 50%;
+    background-color: #691886;
+    color: white;
+}
+
+.comment-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment-section form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.comment-input-box {
+    width: 98%;
+    max-width: 950px;
+}
+
+.comment-btn {
+    margin-bottom: 2rem;
+    background-color: var(--custom-dark-green-clr);
+    color: white;
+}
+
+/*customizing about page*/
+.about-info {
+    margin-top: 8rem;
+}
+
+.about-info-header {
+    margin-bottom: 2.5rem;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.about-info-text {
+    margin-bottom: 3rem;
+    line-height: 3rem;
+    font-size: 1.3rem;
+}
+
+.about-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-img {
+    margin-bottom: 2rem;
+}
+
+.about-img img {
+    border: 5px solid var(--custom-bg-clr);
+}
+
+/*customizing gallery page*/
+.room-info {
+    margin-top: 8rem;
+    text-align: center;
+}
+
+.room-header {
+    margin-bottom: 2.5rem;
+    font-size: 4rem;
+}
+
+.room-images-booking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.room-booking-container {
+    width: 98%;
+    max-width: 350px;
+    border: 1px solid gray;
+    margin-bottom: .8rem;
+}
+
+.room-name-description {
+    margin: 1.2rem 1rem 3rem 1rem;
+    text-align: center;
+}
+
+.room-name{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.custom-size-room-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.book-now-btn-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.3rem;
+}
+
+.book-now-btn {
+    background-color: var(--custom-dark-green-clr);
+    color: white;
+    padding: 1.4rem 3rem;
+    border: 2px solid var(--custom-dark-green-clr);
+    border-radius: 30px;
+    font-size: .6rem;
+    letter-spacing: 10px;
+}
+
+.book-now-btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid var(--custom-dark-green-clr);
+}
+
+/*customizing blog page*/
+.img-blog-info, .blog-header-section {
+    position: relative;
+}
+
+.img-blog-info {
+    background-image: url(img/image\ 49.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: .7rem;
+}
+
+.fa-r {
+    width: 30px;
+    padding: .5rem;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1rem;
+    margin-right: .5rem;
+    background-color: #366FDF;
+    color: white;
+}
+
+.white-background-transparent {
+    width: 100%;
+    height: 550px;
+    padding: 1.2rem;
+    background-color: white;
+    opacity: .8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-text {
+    font-size: clamp(.579rem, 1.2vw, 1.5rem);
+    line-height: 1.6rem;
+}
+
+.blog-info {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+.text-sidebar {
+    font-weight: 700;
+}
+
+.side-img {
+    display: flex;
+    justify-content: center;
+}
+
+.side-img-text {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.sidebar .link {
+    text-align: center;
+}
+
+.article-link {
+    text-decoration: none;
+    color: black;
+}
+
+.all-article-link {
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+}
+
+.side-img img {
+    border: 15px solid var(--custom-light-gray);
+}
+
+/*customizing contact form*/
+.bg-pic-contact-page {
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)), url(img/image\ 43.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-areas: 
+        "address-info"
+        "call-us-info"
+        "contact-form"
+    ;
+    justify-items: center;
+    gap: 3rem;
+}
+
+.address-info {
+    width: 100%;
+    max-width: 250px;
+    height: 307px;
+    background-color: white;
+    padding: 2rem;
+    border-top: 10px solid var(--custom-purple-clr);
+    border-bottom: 10px solid var(--custom-purple-clr);
+    border-radius: 5px;
+    margin-top: 8rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: address-info;
+}
+
+.fa-location-dot, .fa-phone {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.call-us-info {
+    width: 100%;
+    max-width: 250px;
+    background-color: white;
+    padding: 3.3rem;
+    border-top: 10px solid var(--custom-blue-clr);
+    border-bottom: 10px solid var(--custom-blue-clr);
+    border-radius: 5px;
+    text-align: center;
+    grid-area: call-us-info;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 450px;
+    background-color: white;
+    padding: 2rem;
+    border-top: 10px solid var(--custom-bg-clr);
+    border-bottom: 10px solid var(--custom-bg-clr);
+    border-radius: 5px;
+    margin-bottom: 8rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: contact-form;
+}
+
+.contact-header {
+    margin-bottom: 2rem;
+}
+
+.input-box {
+    width: 100%;
+    margin-bottom: 1.2rem;
+}
+
+input[type="text"], textarea {
+    padding: .5rem;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+.footer {
+    padding: 3rem;
+    background-color: var(--custom-black-clr);
+    color: white;
+    text-align: center;
+}
+
+/*customizing user's profile*/
+.profile-box {
+    padding: 5.2rem 0;
+    background-color: var(--custom-light-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-info {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.border-radius-pic {
+    width: 150px;
+    height: 150px;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.profile-description {
+    text-align: center;
+}
+
+.name, .message-btn-section {
+    margin-top: 2rem;
+}
+
+.message-btn-section {
+    width: 98%;
+    max-width: 450px;
+}
+
+.subtext {
+    margin-bottom: 2.5rem;
+}
+
+.message-btn {
+    background-color: var(--custom-bg-clr);
+    width: 100%;
+    padding: .6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.posts-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.username-post-section {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1.3rem;
+    border-bottom: 1px solid black;
+}
+
+.posts-info {
+    margin: 1.125rem 0;
+    background-color: white;
+    padding: 1rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.small-pic {
+    width: 50px;
+    height: 50px;
+}
+
+.username, .date-and-time-of-post {
+    margin: 0;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-pic {
+    max-width: 350px;
+    height: 250px;
+    align-self: center;
+}
+
+/*customizing message hover button*/
+.message-btn:hover {
+    background-color: var(--custom-hover);
+    color: white;
+}
+
+/*customizing search results*/
+.parent-search-result {
+    display: flex;
+    justify-content: center;
+}
+
+.search-result-profile-box {
+    background-color: var(--custom-light-gray);
+    margin-top: 6rem;
+    padding: 2rem 5rem;
+    border-radius: 10px;
+    width: 900px;
+}
+
+.search-result-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.125rem 0;
+}
+
+.left-col-search-result {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.search-result-pic {
+    border: 2px solid black;
+}
+
+.search-result-message-btn {
+    width: 150px;
+}
+
+.custom-hover-link:hover {
+    border-bottom: 1px solid black;
+}
+
+@media(min-width: 768px){
+    .bg-pic-contact-page {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "address-info call-us-info"
+            "contact-form contact-form"
+        ;
+        justify-items: center;
+    }
+
+    .address-info {
+        margin-top: 8rem;
+        grid-area: address-info;
+    }
+
+    .call-us-info {
+        margin-top: 8rem;
+        grid-area: call-us-info;
+    }
+
+    .contact-form {
+        grid-area: contact-form;
+    }
+
+    /*tablet view for the user's profile*/
+    .profile-info, .posts-section, .posts-info {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .post {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 2rem;
+    }
+}
+
+@media(min-width: 992px){
+    .homepage-grid {
+        display: flex;
+        gap: 4rem;
+        margin-bottom: 5rem;
+    }
+
+    .left-col {
+        align-items: flex-start;
+    }
+
+    .homepage-header, .rating, .homepage-subheader {
+        text-align: left;
+    }
+
+    .img-description {
+        width: 600px;
+    }
+
+    .comment-section {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .comment-section form {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .comment-btn {
+        margin-bottom: 0;
+    }
+
+    .searchbar-section {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+    }
+    
+    .searchbar-section form {
+        width: 90%;
+        max-width: 400px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    
+    .magnifying-glass-btn {
+        position: absolute;
+        right: 10px;
+    }
+    
+    .searchbar {
+        width: 100%;
+        padding: .5rem;
+        border: 2px solid var(--custom-dark-gray);
+        border-radius: 20px;
+        outline: none;
+    }
+    
+    .searchbar-mobile-view, .magnifying-glass-btn-mobile-view, .searchbar-in-navbartoggler {
+        display: none;
+    }
+
+    .about-images {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .room-booking-container {
+        max-width: 500px;
+    }
+
+    .room-images-booking {
+        display: grid;
+        grid-template-columns: 350px 350px 350px;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .custom-size-room-img {
+        max-width: 100%;
+    }
+
+    .blog-info {
+        margin-top: 8rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "blog-header-section sidebar"
+            "img-blog-info sidebar"
+            "img-blog-info side-img"
+        ;
+        gap: 4rem;
+    }
+    
+    .img-blog-info {
+        grid-area: img-blog-info;
+    }
+    
+    .sidebar {
+        grid-area: sidebar;
+    }
+    
+    .side-img {
+        grid-area: side-img;
+    }
+
+    .border-radius {
+        top: 87%;
+    }
+
+    .bg-pic-contact-page {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .contact-form {
+        margin-top: 8rem;
+    }
+
+    /*customizing user's profile for desktop view*/
+    .profile-box {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .profile-info {
+        max-width: 300px;
+    }
+
+    .posts-info {
+        width: 100%;
+        margin: 0 0 1rem 0;
+        gap: 2rem;
+    }
+}

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --custom-bg-clr: #9EC680;
+    --custom-blue-clr: #366FDF;
+    --custom-navbar-bg-clr: #9EC680;
+    --custom-hover: #344e41;
+    --other-custom-hover: #31572c;
+    --custom-dark-green-clr: #4F7636;
+    --custom-light-gray: #E5E5E5;
+    --custom-dark-gray: #adb5bd;
+    --custom-purple-clr: #C071CD;
+    --custom-black-clr: #0b090a;
+    --custom-ff: 'Roboto', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: var(--custom-ff);
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thank-you-header {
+    font-size: 4rem;
+}
+
+.fa-check {
+    color: green;
+    font-size: 8rem;
+}
+
+.subtext {
+    font-size: 1.125rem;
+}
+
+.back-to-home-btn {
+    background-color: var(--custom-dark-green-clr);
+    color: white;
+    border: 2px solid var(--custom-dark-green-clr);
+    border-radius: 20px;
+    padding: .7rem 1.2rem;
+    margin-bottom: 4rem;
+}
+
+.back-to-home-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.fa-arrow-left {
+    margin-right: 1.5rem;
+}
+
+.direct-to-contact-page a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.direct-to-contact-page a:hover {
+    border-bottom: 1px solid black;
+}

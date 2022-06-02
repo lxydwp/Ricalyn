@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --custom-bg-clr: #9EC680;
+    --custom-blue-clr: #366FDF;
+    --custom-navbar-bg-clr: #9EC680;
+    --custom-hover: #344e41;
+    --other-custom-hover: #31572c;
+    --custom-dark-green-clr: #4F7636;
+    --custom-light-gray: #E5E5E5;
+    --custom-dark-gray: #adb5bd;
+    --custom-purple-clr: #C071CD;
+    --custom-black-clr: #0b090a;
+    --custom-ff: 'Roboto', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: var(--custom-ff);
+}
+
+.admin-login-bg-img {
+    background-image: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)), url(img/image\ 49.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-form {
+    padding: 2rem 0;
+    border-radius: 10px;
+    width: 98%;
+    max-width: 500px;
+    background-color: var(--custom-bg-clr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-header {
+    width: 100%;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid black;
+}
+
+.fa-user, .fa-key {
+    font-size: 1.3rem; 
+    background-color: black;
+    color: white;
+    padding: .7rem;
+    position: absolute;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin: 1rem 0 .2rem 0;
+    position: relative;
+}
+
+.username-input-box, .password-input-box {
+    width: 100%;
+    padding: .6rem;
+    border-radius: 0 6px 6px 0;
+    border: 2px solid var(--custom-bg-clr);
+    margin-left: 2.5rem;
+}
+
+.login-btn-section {
+    margin-top: 3rem;
+    width: 70%;
+    max-width: 700px;
+}
+
+.login-btn {
+    padding: .5rem;
+    width: 100%;
+    background-color: var(--custom-dark-green-clr);
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: var(--other-custom-hover);
+    color: white;
+}
+
+.username-input-box:active, .username-input-box:focus, .password-input-box:active, .password-input-box:focus {
+    outline: none !important;
+}
